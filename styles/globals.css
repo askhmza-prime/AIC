@@ -1,1 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* Color Variables */
+:root {
+  --foreground-rgb: 10, 10, 10;
+  --background-rgb: 255, 255, 255;
+  --primary: #0F5F3F;
+}
+
+/* Global Body */
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+/* Container Wrapper */
+.container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-primary text-white px-6 py-3 rounded-md font-medium 
+         transition-all hover:bg-opacity-90 hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary px-6 py-3 rounded-md 
+         font-medium transition-all hover:bg-primary hover:text-white;
+}
+
+/* Section Padding */
+.section-padding {
+  @apply py-16 md:py-20;
+}
